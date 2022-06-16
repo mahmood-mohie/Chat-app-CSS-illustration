@@ -28,8 +28,6 @@ Users should be able to:
 
 ![](/snapshots/snapshots-1.png)
 ![](/snapshots/snapshots-2.png)
-![](/snapshots/snapshots-3.png)
-
 
 ### Links
 
