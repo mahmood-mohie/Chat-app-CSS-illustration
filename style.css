@@ -1,0 +1,289 @@
+/* Start Variable */
+:root {
+    --app-background:  hsl(270, 20%, 96%);
+    --submit-btn-background: hsl(271, 36%, 24%);
+    --btn-outline: hsl(289, 100%, 72%) ;
+    --main-heading:  hsl(271, 36%, 24%);
+    --paragragh: hsl(270, 7%, 64%);
+    --sub-heading: hsl(276deg 100% 81% / 28%);
+    --chat-right: hsl(271, 15%, 43%);
+    --chat-left: hsl(276, 55%, 52%);
+}
+/* End Variable */
+
+/* Start Globle Values */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    Font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+/* End Global Values */
+
+.app {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.cir-1 {
+    z-index: -1;
+    width: 414px;
+    height: 570px;
+    position: absolute;
+    top: -25px;
+    left: -77px;
+    border-radius: 0 0 210px 210px;
+    background-image: linear-gradient(to right,hsl(264, 100%, 61%) ,hsl(293, 100%, 63%));
+}
+.cir-2 {
+    z-index: -2;
+    width: 414px;
+    height: 33em;
+    position: absolute;
+    bottom: 0px;
+    right: -130px;
+    border-radius: 210px 210px 0 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right,hsl(264deg 100% 61% / 5%) ,hsl(293deg 100% 63% / 7%));
+}
+
+.grid-col-2 {
+    margin: 7em auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , 220px minmax(400px , 1fr));
+    gap: 100px;
+    max-width: 800px;
+    align-items: center;
+}
+@media (max-width: 600px){
+    .grid-col-2 {
+        grid-template-columns:  minmax(400px , 1fr);
+        gap: 60px;
+    }
+    .grid-col-2 .page-heading {
+        justify-self: center;
+        text-align: center;
+        padding: 50px;
+    }
+    .grid-col-2 .phone {
+        justify-self: center;
+    }
+    .app .cir-1 {
+        position: absolute;
+        top: -25px;
+        left: -174px;
+    }
+    .app .cir-2 {
+        position: absolute;
+        bottom: 0px;
+        right: -174px;
+    }
+}
+/* phone */
+.grid-col-2 .phone {
+    background-color: var(--app-background);
+    width: 220px;
+    border:7px solid white;
+    border-radius: 25px;
+}
+/* phone - Head */
+.phone .head {
+    position: relative;
+    border-radius: 18px 18px 5px 5px;
+    background-image: linear-gradient(to right,hsl(264, 100%, 61%) ,hsl(293, 100%, 63%));
+}
+.phone .head span {
+    width: 110px;
+    height: 18px;
+    background: white;
+    position: absolute;
+    left: 47px;
+    top: -1px;
+    border-radius: 0 0 12px 12px;
+}
+.phone .head .user {
+    display: flex;
+    padding: 26px 20px 10px;
+}
+.phone .head .user img {
+    display: block;
+    position: relative;
+    width: 24px;
+    border-radius: 50%;
+    height: 24px;
+    outline: 1px solid white;
+}
+.phone .head .user::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 10px;
+    top: 33px;
+    border: 2px solid;
+    border-color: white transparent transparent white;
+    transform: rotate(315deg);
+}
+.phone .head .user .icon-dots {
+    width: 2px;
+    height: 10px;
+    position: absolute;
+    top: 33px;
+    right: 12px;
+}
+.phone .head .user .icon-dots div {
+    height: 2px;
+    margin-bottom: 1px;
+    background-color: white;
+}
+.phone .head .user .user-name {
+    margin-left: 10px;
+}
+.phone .head .user .user-name h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+.phone .head .user .user-name p {
+    font-size: 8px;
+    font-weight: 400;
+    color: hsl(270, 7%, 64%);
+}
+
+/* Phone - body */
+.phone .body-app {
+    padding: 9px;
+    font-size: 7px;
+    font-weight: 500;
+    line-height: 10px;
+}
+    /* body-app first chat-left */ 
+.phone .body-app .left {
+    width: 118px;
+}
+.phone .body-app .left p{
+    background-color: var(--sub-heading);
+    color: var(--chat-left);
+    padding: 4px;
+    margin-bottom: 5px;
+    border-radius: 6px 6px 6px 2px;
+}
+
+    /* body-app chat-right */
+.phone .body-app .right {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    margin: 8px 0;
+}
+.phone .body-app .right .pics {
+    margin: 5px 0;
+}
+.phone .body-app .right .pics img {
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+}
+.phone .body-app .right p {
+    background-color: white;
+    color: var(--chat-right);
+    padding: 4px;
+    margin-bottom: 5px;
+    border-radius: 6px 6px 2px 6px ;
+}
+.phone .body-app .right p:first-of-type {
+    width: 115px;
+}
+
+    /* body-app second chat-left */ 
+.phone .body-app .left .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 135px;
+    padding: 6px 9px;
+    border-radius: 6px 6px 6px 2px;
+    background-image: linear-gradient(to left,hsl(264, 100%, 61%) ,hsl(293, 100%, 63%));
+}
+.phone .body-app .left .price span:first-child {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: .5px solid white;
+    border-radius: 50%;
+}
+.phone .body-app .left .price  p {
+    color: white;
+    background: 0;
+    margin: 0px 24px 0 0px;
+}
+.phone .body-app .left .price span:last-child {
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+}
+    /* body-app input-text */
+.phone .body-app .write {
+    position: relative;
+    margin-top: 10px;
+}
+.phone .body-app .write input[type="text"] {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+}
+button {
+    position: absolute;
+    top: 3px;
+    right: 3.5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--submit-btn-background);
+    border: 0;
+    cursor: pointer;
+  }
+button::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right: 11px;
+    top: 9.5px;
+    border: 3px solid;
+    border-color: white transparent transparent white;
+    transform: rotate(135deg);
+    border-radius: 2px;
+}
+::placeholder {
+    font-size: 9px;
+    font-weight: 400;
+    color: hsl(276, 5%, 81%);;
+}
+input:focus {
+    outline: none;
+}
+/* Page Heading */
+.grid-col-2 .page-heading {
+    width: 100%;
+}
+.grid-col-2 .page-heading h1 {
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--main-heading);
+}
+.grid-col-2 .page-heading p {
+    color: var(--paragragh);
+    line-height: 26px;
+    font-weight: 400;
+}
